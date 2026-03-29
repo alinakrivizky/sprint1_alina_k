@@ -15,8 +15,11 @@ class TestCase:
     def set_result (self, result):
         self.result = result
     def get_test_case( self):
-        return self.steps, self.result
-    
+         return {
+            'Шаги': self.steps,
+            'Ожидаемый результат': self.result
+        }
+
 test_case_1 = TestCase()
 test_case_1.set_step(1, 'Перейти на сайт')
 test_case_1.set_step(3, 'Перейти в раздел Товары')
